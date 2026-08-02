@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brutal-base: #080A10;
+    --brutal-primary: #F8FAFC;
+    --brutal-red: #E1251B;
+    --brutal-orange: #F59E0B;
+    --brutal-pink: #FF3B5C;
+    --brutal-gray: #111520;
+    --brutal-dark-gray: #94A3B8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--brutal-base);
+    color: var(--brutal-primary);
+    font-family: 'Satoshi', 'Noto Sans Gujarati', 'Anek Gujarati', sans-serif;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(at 15% 15%, rgba(225, 37, 27, 0.08) 0px, transparent 60%),
+      radial-gradient(at 85% 85%, rgba(245, 158, 11, 0.06) 0px, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background-color: #E1251B;
+    color: #FFFFFF;
+  }
+
+  /* Custom Scrollbar - sleek dark mode scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080A10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A3245;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E1251B;
+  }
+}
+
+@layer components {
+  /* Raw Form Headline Typography */
+  .font-clash-hero {
+    font-family: 'Clash Display', 'Anek Gujarati', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+  }
+
+  .font-gujarati-heading {
+    font-family: 'Anek Gujarati', 'Noto Sans Gujarati', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  /* Interactive Luxury Automotive CTA Button */
+  .brutal-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.25rem;
+    background: linear-gradient(135deg, #E1251B 0%, #B91C1C 100%);
+    color: #FFFFFF;
+    font-family: 'Satoshi', 'Noto Sans Gujarati', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 25px -5px rgba(225, 37, 27, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+  }
+
+  .brutal-cta-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: -1;
+  }
+
+  .brutal-cta-btn:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px -5px rgba(225, 37, 27, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .brutal-cta-btn:hover::after {
+    transform: translateX(100%);
+  }
+
+  .brutal-cta-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 15px -3px rgba(225, 37, 27, 0.4);
+  }
+
+  /* Glassmorphic Luxury Card Panels */
+  .glass-panel {
+    background-color: rgba(17, 21, 32, 0.75);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+  }
+
+  .luxury-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .luxury-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(225, 37, 27, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(225, 37, 27, 0.15), 0 0 20px -5px rgba(0, 242, 254, 0.1);
+  }
+
+  /* Animated Gradient Blobs */
+  .gradient-blob {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    filter: blur(140px);
+    pointer-events: none;
+    border-radius: 9999px;
+  }
+
+  /* Modern luxury border divider */
+  .brutal-divider {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Custom smooth animations */
+@keyframes floatCar {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.6deg);
+  }
+}
+
+.animate-float-car {
+  animation: floatCar 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
