@@ -93,24 +93,8 @@ export default function Footer({ lang = 'gu' }) {
                 <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
                 <span>
                   {lang === 'gu'
-                    ? 'અમદાવાદ: એસ.જી. હાઇવે, વૈષ્ણોદેવી સર્કલ પાસે'
-                    : 'Ahmedabad: S.G. Highway, near Vaishnodevi Circle'}
-                </span>
-              </li>
-              <li className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                <span>
-                  {lang === 'gu'
-                    ? 'સુરત: ડુમસ રોડ, પીપલોદ હબ'
-                    : 'Surat: Dumas Road, Piplod Automotive Hub'}
-                </span>
-              </li>
-              <li className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
-                <span>
-                  {lang === 'gu'
-                    ? 'રાજકોટ: કાલાવડ રોડ, ક્રિસ્ટલ મોલ સામે'
-                    : 'Rajkot: Kalawad Road, opp. Crystal Mall'}
+                    ? 'માર્કેટિંગ યાર્ડ રોડ, રાજકોટ-ભાવનગર હાઈવે, બાબરા, ગુજરાત'
+                    : 'Marketing Yard Road, Rajkot-Bhavnagar Highway, Babra, Gujarat'}
                 </span>
               </li>
               <li className="flex items-start space-x-2.5 pt-1 text-white">
