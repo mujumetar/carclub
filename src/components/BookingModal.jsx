@@ -73,7 +73,7 @@ export default function BookingModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
       <div className="relative w-full max-w-xl bg-[#111520] border border-white/15 shadow-2xl p-6 sm:p-8 rounded-3xl overflow-hidden text-white">
-        
+
         {/* Close Button */}
         <button
           onClick={handleResetAndClose}
@@ -212,11 +212,10 @@ export default function BookingModal({
                     key={slot}
                     type="button"
                     onClick={() => setFormData({ ...formData, timeSlot: slot })}
-                    className={`p-3 text-xs font-satoshi font-bold uppercase rounded-xl border text-center transition-all ${
-                      formData.timeSlot === slot
-                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white border-red-500 shadow-md'
-                        : 'bg-white/5 text-slate-300 border-white/15 hover:border-red-500'
-                    }`}
+                    className={`p-3 text-xs font-satoshi font-bold uppercase rounded-xl border text-center transition-all ${formData.timeSlot === slot
+                      ? 'bg-gradient-to-r from-red-600 to-red-500 text-white border-red-500 shadow-md'
+                      : 'bg-white/5 text-slate-300 border-white/15 hover:border-red-500'
+                      }`}
                   >
                     {slot}
                   </button>
